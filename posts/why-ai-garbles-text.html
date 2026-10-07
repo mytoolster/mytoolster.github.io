@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why AI Image Generators Garble Text — and How to Fix It — MyToolster Blog</title>
+<meta name="description" content="Why diffusion models garble text and how to fix misspelled words without regenerating.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.8;color:#1a1a1a;background:#fafafa}
+header{background:#111;color:#fff;padding:1.5rem;text-align:center}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.2rem}
+article{max-width:720px;margin:2rem auto;padding:2rem 1.5rem;background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+h1{font-size:1.6rem;margin-bottom:.5rem;line-height:1.4}
+.meta{color:#888;font-size:.85rem;margin-bottom:1.5rem}
+h2{font-size:1.2rem;margin:1.8rem 0 .8rem}
+p{margin-bottom:1rem;color:#333}
+ul{margin:0 0 1rem 1.5rem;color:#333}
+li{margin-bottom:.4rem}
+a{color:#0066cc}
+footer{background:#111;color:#999;padding:2rem 1.5rem;text-align:center;margin-top:3rem}
+footer a{color:#ccc;text-decoration:none;margin:0 .7rem;font-size:.9rem}
+</style>
+</head>
+<body>
+<header><a href="../index.html">MyToolster Blog</a></header>
+<article>
+<h1>Why AI Image Generators Garble Text — and How to Fix Misspelled Words Without Regenerating</h1>
+<div class="meta">PhotoTextEdit · Deep Dive · By MyToolster</div>
+
+<p>Diffusion models are miraculous at images and terrible at spelling. Here's why — and what to do about it.</p>
+
+<h2>Why the text comes out wrong</h2>
+<ul>
+<li><strong>Letters as textures.</strong> Diffusion models predict pixels, not characters. A letter is just another texture pattern to them.</li>
+<li><strong>Encoder compression.</strong> Text encoders like CLIP/T5 compress prompts into embeddings that preserve meaning but lose exact character order.</li>
+<li><strong>Training data.</strong> The web is full of distorted, stylized, and low-res text in images — the model learns that "text" often looks blurry and wrong.</li>
+</ul>
+
+<h2>Why regenerating is a bad fix</h2>
+<p>Re-rolling changes everything — composition, lighting, style. You might get the spelling right on roll #12 and lose the image you actually wanted. Prompt engineering ("spell C-O-F-F-E-E correctly") helps marginally but doesn't fix the underlying architecture.</p>
+
+<h2>The in-place fix</h2>
+<p>Edit the text where it sits: upload the image, mark the wrong word, type the correction. Modern inpainting fills the region while matching the surrounding font, lighting, texture, and perspective. Three practical tips:</p>
+<ul>
+<li>Keep the replacement roughly the same character count as the original</li>
+<li>Fix one word at a time on dense text</li>
+<li>For 3D/neon/stylized text, use a dedicated mode if available</li>
+</ul>
+
+<p>I do this with <a href="https://phototextedit.com" target="_blank" rel="noopener">PhotoTextEdit</a> — free, in the browser, no signup.</p>
+
+<p><em>Also published on:</em> <a href="https://mytoolster.hashnode.dev/why-ai-image-generators-garble-text-and-how-to-fix-misspelled-words-without-regenerating" target="_blank" rel="noopener">Hashnode</a> · <a href="https://phototextedit.com/blog/why-ai-garbles-text-and-how-to-fix-it" target="_blank" rel="noopener">phototextedit.com/blog</a></p>
+</article>
+<footer>
+<a href="https://medium.com/@mytoolster" target="_blank" rel="noopener">Medium</a>
+<a href="https://mytoolster.substack.com" target="_blank" rel="noopener">Substack</a>
+<a href="https://mytoolster.hashnode.dev" target="_blank" rel="noopener">Hashnode</a>
+<a href="https://dev.to/fastoolster" target="_blank" rel="noopener">Dev.to</a>
+<p style="margin-top:1rem;font-size:.85rem">© 2026 MyToolster · <a href="https://freellm.net">freellm.net</a> · <a href="https://mytoolster.com">mytoolster.com</a> · <a href="https://phototextedit.com">phototextedit.com</a></p>
+</footer>
+</body>
+</html>

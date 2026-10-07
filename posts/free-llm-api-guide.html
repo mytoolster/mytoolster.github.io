@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Run Claude Code on $0/Month: A Practical Guide to Free LLM APIs — MyToolster Blog</title>
+<meta name="description" content="How to get free LLM API access and wire it into Claude Code with zero spend.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.8;color:#1a1a1a;background:#fafafa}
+header{background:#111;color:#fff;padding:1.5rem;text-align:center}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.2rem}
+article{max-width:720px;margin:2rem auto;padding:0 1.5rem;background:#fff;border-radius:10px;padding:2rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+h1{font-size:1.6rem;margin-bottom:.5rem;line-height:1.4}
+.meta{color:#888;font-size:.85rem;margin-bottom:1.5rem}
+h2{font-size:1.2rem;margin:1.8rem 0 .8rem}
+p{margin-bottom:1rem;color:#333}
+ul{margin:0 0 1rem 1.5rem;color:#333}
+li{margin-bottom:.4rem}
+a{color:#0066cc}
+code{background:#f0f0f0;padding:.15em .4em;border-radius:4px;font-size:.9em}
+footer{background:#111;color:#999;padding:2rem 1.5rem;text-align:center;margin-top:3rem}
+footer a{color:#ccc;text-decoration:none;margin:0 .7rem;font-size:.9rem}
+</style>
+</head>
+<body>
+<header><a href="../index.html">MyToolster Blog</a></header>
+<article>
+<h1>I Run Claude Code on $0/Month: A Practical Guide to Free LLM APIs</h1>
+<div class="meta">FreeLLM · Tutorial · By MyToolster</div>
+
+<p>You don't need a paid API subscription to run a serious coding workflow. In 2026 there are multiple genuinely free LLM API tiers — the trick is knowing their limits and routing around them.</p>
+
+<h2>Where the free APIs are</h2>
+<ul>
+<li><strong>Google AI Studio</strong> — Gemini 2.5 Flash, generous daily quota, no card required</li>
+<li><strong>Groq</strong> — blazing fast inference, free tier for Llama and other open models</li>
+<li><strong>OpenRouter</strong> — aggregates free models behind one key</li>
+<li><strong>Cerebras</strong> — extremely fast free inference tier</li>
+<li><strong>Mistral</strong> — free tier on their API platform</li>
+</ul>
+<p>A full comparison of 489 free models across 30 providers lives at <a href="https://freellm.net" target="_blank" rel="noopener">freellm.net</a> — it's the directory I use to check which models are actually free right now.</p>
+
+<h2>Three steps to $0/month Claude Code</h2>
+<p><strong>1. Grab a free API key.</strong> Start with Google AI Studio — sign in with Google, create a key, done in two minutes.</p>
+<p><strong>2. Point Claude Code at it.</strong> Set <code>ANTHROPIC_BASE_URL</code> and <code>ANTHROPIC_AUTH_TOKEN</code> to route requests through an OpenAI-compatible free endpoint.</p>
+<p><strong>3. Verify with the playground.</strong> Test the key at <a href="https://freellm.net" target="_blank" rel="noopener">freellm.net</a> before wiring it into your editor.</p>
+
+<h2>Caveats</h2>
+<p>Free tiers have rate limits — they're fine for steady work but not for bulk jobs. There's no free Claude. And free tiers change constantly, so check <a href="https://freellm.net" target="_blank" rel="noopener">freellm.net</a> before relying on one.</p>
+
+<p><em>Also published on:</em> <a href="https://dev.to/fastoolster/i-run-claude-code-on-0month-a-practical-guide-to-free-llm-apis-2o8g" target="_blank" rel="noopener">Dev.to</a> · <a href="https://mytoolster.hashnode.dev/" target="_blank" rel="noopener">Hashnode</a> · <a href="https://medium.com/@mytoolster" target="_blank" rel="noopener">Medium</a></p>
+</article>
+<footer>
+<a href="https://medium.com/@mytoolster" target="_blank" rel="noopener">Medium</a>
+<a href="https://mytoolster.substack.com" target="_blank" rel="noopener">Substack</a>
+<a href="https://mytoolster.hashnode.dev" target="_blank" rel="noopener">Hashnode</a>
+<a href="https://dev.to/fastoolster" target="_blank" rel="noopener">Dev.to</a>
+<p style="margin-top:1rem;font-size:.85rem">© 2026 MyToolster · <a href="https://freellm.net">freellm.net</a> · <a href="https://mytoolster.com">mytoolster.com</a> · <a href="https://phototextedit.com">phototextedit.com</a></p>
+</footer>
+</body>
+</html>
